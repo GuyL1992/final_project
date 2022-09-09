@@ -365,7 +365,14 @@ double calcWeight(double* a, double* b, int d)
     norm = -norm/2;
     return exp(norm);
 }
-
+/**
+ * @brief This funcion generates a weightedMatrix by getting a vectorsMatrix.
+ * 
+ * @param weightedMatrix 
+ * @param vectorsMatrix  
+ * @param n 
+ * @param d 
+ */
 void formWeightedMatrix(double** weightedMatrix,double** vectorsMatrix, int n, int d){
     double weight;
     int row;
@@ -557,8 +564,13 @@ void formRotaionMatrix(double** P ,double** A,double** V, int n){
 
     return;
 }
-
-void formIdentityMatrix(double** V, int n){ //Guy
+/**
+ * @brief This function generates identity matrix.
+ * 
+ * @param V 
+ * @param n 
+ */
+void formIdentityMatrix(double** V, int n){ 
 
     int i;
     for( i = 0; i < n; i++){
@@ -566,7 +578,13 @@ void formIdentityMatrix(double** V, int n){ //Guy
     }
 
 }
-
+/**
+ * @brief Get the Transpose Matrix object
+ * 
+ * @param matrix 
+ * @param n 
+ * @return double** 
+ */
 double ** getTransposeMatrix(double** matrix, int n){
     int i;
     int j;
@@ -581,6 +599,14 @@ double ** getTransposeMatrix(double** matrix, int n){
     }
     return matrix;
 }
+/**
+ * @brief Get the Similar Matrix object
+ * 
+ * @param A 
+ * @param P 
+ * @param temp 
+ * @param n 
+ */
 
 void getSimilarMatrix(double** A, double** P,double** temp, int n){
 
@@ -592,7 +618,13 @@ void getSimilarMatrix(double** A, double** P,double** temp, int n){
     return ;
 
 }
-
+/**
+ * @brief This function get the diagonal values of matrix A.
+ * 
+ * @param eigenValues 
+ * @param A 
+ * @param n 
+ */
 void fill_with_diagonal(double* eigenValues, double** A, int n){
     int i;
     for(i=0; i < n; i++){
